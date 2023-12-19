@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GetAllFuelResponse {
-	private int id;
-	private String name;
+	private int fuelId;
+	private String fuelName;
 	
 
 }

@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -44,8 +43,8 @@ public class ColorController {
 	{
 		this.colorService.update(updateColorRequest);
 	}
-	@DeleteMapping("/{deleteColorRequest}")
-	public void delete(@PathVariable DeleteColorRequest deleteColorRequest)
+	@DeleteMapping()
+	public void delete(@RequestBody DeleteColorRequest deleteColorRequest)
 	{
 		this.colorService.delete(deleteColorRequest);
 	}

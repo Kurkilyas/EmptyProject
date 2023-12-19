@@ -18,19 +18,19 @@ public class GetAllCarResponse {
 	private int modelYear;
   
 	
-	private String carState; // müsait , kiralık , bakımda 
+	private String stateName; // müsait , kiralık , bakımda 
 	
 	private String km;
 	
 	private String dateOfAnnouncement;
 	
-	private String carStatus;
+	private String statusName;
 	
 	private String colorName;
 	
-	private String carFuel;
+	private String fuelName;
 	
-	private String carGear;
+	private String gearName;
 	  
 	private String modelName;
 }

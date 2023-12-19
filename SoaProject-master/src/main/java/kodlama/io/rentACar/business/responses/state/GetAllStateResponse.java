@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GetAllStateResponse {
-	private int id;
-	private String name;
+	private int stateId;
+	private String stateName;
 	
 
 }

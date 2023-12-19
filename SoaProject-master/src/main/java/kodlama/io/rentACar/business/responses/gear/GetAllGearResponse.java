@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GetAllGearResponse {
-	private int id;
-	private String name;
+	private int gearId;
+	private String gearName;
 	
 
 }

@@ -15,7 +15,7 @@ public class UpdateGearRequest {
 	private int id;
 	@NotBlank
 	@NotNull
-	private String name;
+	private String Name;
 	
 	
 
