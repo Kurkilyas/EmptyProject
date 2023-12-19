@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
 import kodlama.io.rentACar.business.abstracts.BrandService;
 import kodlama.io.rentACar.business.requests.brand.CreateBrandRequest;
+import kodlama.io.rentACar.business.requests.brand.DeleteBrandRequest;
 import kodlama.io.rentACar.business.requests.brand.UpdateBrandRequest;
 import kodlama.io.rentACar.business.responses.brand.GetAllBrandsResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByIdBrandResponse;
@@ -61,10 +62,10 @@ public class BrandsController {
 		this.brandService.update(updateBrandRequest);
 	}
 	
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable int id)
+	@DeleteMapping()
+	public void delete(@RequestBody DeleteBrandRequest deleteBrandRequest)
 	{
-		this.brandService.delete(id);
+		this.brandService.delete(deleteBrandRequest);
 	}		
 }
  	 	 	

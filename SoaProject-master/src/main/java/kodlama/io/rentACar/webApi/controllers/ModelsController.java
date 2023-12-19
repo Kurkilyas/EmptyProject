@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import jakarta.validation.Valid;
 import kodlama.io.rentACar.business.abstracts.ModelService;
 import kodlama.io.rentACar.business.requests.model.CreateModelRequest;
+import kodlama.io.rentACar.business.requests.model.DeleteModelRequest;
 import kodlama.io.rentACar.business.requests.model.UpdateModelRequest;
 import kodlama.io.rentACar.business.responses.model.GetAllModelResponse;
 import lombok.AllArgsConstructor;
@@ -44,10 +45,10 @@ public class ModelsController {
 	{
 		modelService.update(uptademodel);
 	}
-	@DeleteMapping("/{id}")
-	public void delete(@PathVariable int id)
+	@DeleteMapping()
+	public void delete(@RequestBody DeleteModelRequest deleteModelRequest)
 	{
-		modelService.delete(id);
+		modelService.delete(deleteModelRequest);
 	}
 	@GetMapping("/{id}")
 	public void getByID(@PathVariable int id)

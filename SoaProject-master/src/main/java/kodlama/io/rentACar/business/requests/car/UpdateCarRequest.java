@@ -32,7 +32,7 @@ public class UpdateCarRequest {
 	private String dateOfAnnouncement;
 	@NotNull 
 	@NotBlank
-	private String carStatus;
+	private String statusId;
 	@NotNull 
 	
 	private int colorId;

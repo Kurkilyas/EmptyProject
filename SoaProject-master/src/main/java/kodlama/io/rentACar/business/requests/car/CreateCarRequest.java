@@ -30,8 +30,8 @@ public class CreateCarRequest {
 	@NotBlank
 	private String dateOfAnnouncement;
 	@NotNull 
-	@NotBlank
-	private String carStatus;
+	
+	private int statusId;
 	@NotNull 
 	
 	private int colorId;

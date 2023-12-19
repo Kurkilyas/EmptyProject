@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kodlama.io.rentACar.business.abstracts.BrandService;
 import kodlama.io.rentACar.business.requests.brand.CreateBrandRequest;
+import kodlama.io.rentACar.business.requests.brand.DeleteBrandRequest;
 import kodlama.io.rentACar.business.requests.brand.UpdateBrandRequest;
 import kodlama.io.rentACar.business.responses.brand.GetAllBrandsResponse;
 import kodlama.io.rentACar.business.responses.brand.GetByIdBrandResponse;
@@ -74,8 +75,8 @@ public class BrandManager implements BrandService{
 	
 
 	@Override
-	public void delete(int id) {
-	this.brandrepository.deleteById(id);
+	public void delete(DeleteBrandRequest deleteBrandRequest) {
+	this.brandrepository.deleteById(deleteBrandRequest.getId());
 		
 	}
 	
